@@ -1,4 +1,4 @@
-web: gunicorn library config.wsgi
+web: gunicorn config.wsgi
 release: python manage.py makemigrations --noinput
-heroku config:set DISABLE_COLLECTSTATIC=1
+release: python manage.py collectstatic --noinput
 release: python manage.py migrate --noinput
